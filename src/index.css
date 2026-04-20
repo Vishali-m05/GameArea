@@ -1,0 +1,154 @@
+/* 🌸 Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #ffe6eb, #fff);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* 🏠 Home */
+.home {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff4d6d;
+  margin-bottom: 30px;
+}
+
+/* 🔲 Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 🎴 Card */
+.game-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+/* 🎮 Game Container */
+.game-container {
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.game-title {
+  font-size: 2rem;
+  color: #ff4d6d;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* 💓 Heart */
+.heart {
+  font-size: clamp(80px, 10vw, 140px);
+  cursor: pointer;
+  margin: 30px 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* 💔 Broken */
+.heart.broken {
+  filter: grayscale(100%);
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-3px, 2px); }
+  50% { transform: translate(3px, -2px); }
+  75% { transform: translate(-3px, 1px); }
+  100% { transform: translate(0); }
+}
+
+/* 🔘 Button */
+.start-btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background: #e60039;
+}
+
+/* 🐱 Cat UI */
+.cat-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat {
+  font-size: 60px;
+}
+
+.board {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #ff4d6d;
+  color: #ff4d6d;
+  font-weight: 600;
+  max-width: 250px;
+  text-align: center;
+  position: relative;
+}
+
+.board::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+/* 🏁 Final */
+.final {
+  margin-top: 20px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .heart {
+    font-size: 80px;
+  }
+
+  .info {
+    gap: 15px;
+    font-size: 1rem;
+  }
+}
